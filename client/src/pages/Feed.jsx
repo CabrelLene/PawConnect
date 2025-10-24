@@ -22,9 +22,19 @@ const onLike = (id, likes) => setPosts(prev => prev.map(p => p._id === id ? { ..
 
 
 return (
-<div style={{ maxWidth:640, margin:'24px auto', display:'grid', gap:12 }}>
+<div className="grid gap-4 md:grid-cols-[1.2fr,0.8fr]">
+<div className="grid gap-4">
 <CreatePost onCreated={onCreated} />
 {posts.map(p => <PostCard key={p._id} post={p} onLike={onLike} />)}
+</div>
+<aside className="hidden md:block card p-4 h-fit sticky top-24">
+<h3 className="font-semibold mb-2">Tendances</h3>
+<ul className="space-y-2 opacity-80 text-sm">
+<li>#chiens</li>
+<li>#cats</li>
+<li>#adoption</li>
+</ul>
+</aside>
 </div>
 )
 }
