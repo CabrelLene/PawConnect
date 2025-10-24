@@ -79,9 +79,52 @@ Ils peuvent liker, commenter, ou suivre son auteur
 React Router gère les pages :
 
 /login
-
 /register
 
 /feed (fil principal)
 
 /profile/:id
+
+
+pawconnect/
+├─ server/
+│ ├─ .env (à créer depuis .env.example)
+│ ├─ .env.example
+│ ├─ package.json
+│ ├─ server.js
+│ ├─ config/
+│ │ └─ db.js
+│ ├─ middleware/
+│ │ └─ auth.js
+│ ├─ models/
+│ │ ├─ User.js
+│ │ ├─ Post.js
+│ │ └─ Comment.js
+│ ├─ routes/
+│ │ ├─ auth.routes.js
+│ │ ├─ users.routes.js
+│ │ ├─ posts.routes.js
+│ │ └─ comments.routes.js
+│ └─ uploads/ (images stockées localement)
+└─ client/
+├─ index.html
+├─ package.json
+├─ vite.config.js
+└─ src/
+├─ main.jsx
+├─ App.jsx
+├─ api.js
+├─ context/
+│ └─ AuthContext.jsx
+├─ components/
+│ ├─ Navbar.jsx
+│ ├─ ProtectedRoute.jsx
+│ ├─ PostCard.jsx
+│ └─ CreatePost.jsx
+└─ pages/
+├─ Login.jsx
+├─ Register.jsx
+├─ Feed.jsx
+└─ Profile.jsx
+
+
